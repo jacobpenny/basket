@@ -214,7 +214,7 @@ SEND_CONFIRM_MESSAGES = config("SEND_CONFIRM_MESSAGES", parser=bool, default="fa
 # Used for transactional emails
 BRAZE_API_KEY = config("BRAZE_API_KEY", default="")
 # Used for everything else
-BRAZE_NEWSLETTER_API_KEY = config("BRAZE_NEWSLETTER_API_KEY", default="")
+BRAZE_NEWSLETTER_API_KEY = config("BRAZE_NEWSLETTER_API_KEY", default="") or BRAZE_API_KEY
 
 BRAZE_BASE_API_URL = config("BRAZE_BASE_API_URL", default="https://rest.iad-05.braze.com")
 # Map of Braze message IDs to the actual message IDs.
